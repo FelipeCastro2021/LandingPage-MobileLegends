@@ -1,0 +1,80 @@
+@use '../1-base/variables'
+
+%card-hover
+  strong, p
+    opacity: 0
+  
+  &:hover
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4))
+
+    strong, p
+      opacity: 1
+
+
+#videos
+  background-color: variables.$black
+
+  .videos-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 3.2rem
+
+    margin-inline: 2rem
+
+    .videos-container
+      display: flex
+      flex-direction: column
+      gap: 3.2rem
+
+      width: 30%
+
+      &-card
+        width: 100%
+        height: 20rem
+
+        position: relative
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        @extend %card-hover
+
+        strong
+          font-size: 2.4rem
+          margin-bottom: .8rem
+
+        p
+          color: variables.$text-color
+      
+    $i: 1
+
+    @for $i from 1 through 5
+      #video-#{$i}
+        background: url('../../assets/video-#{$i}.jpg') no-repeat center center/cover
+        @extend %card-hover
+    
+    .center-video
+      width: 30%
+      height: 43rem
+
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+      position: relative
+
+      background: url('../../assets/video-3.jpg')
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      @extend %card-hover
+
+      strong
+          font-size: 2.4rem
+          margin-bottom: .8rem
+
+      p
+        color: variables.$text-color
