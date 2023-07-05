@@ -43,6 +43,12 @@ footer
         font-weight: bold
         color: variables.$text-color
         margin-bottom: 1rem
+
+        transition: color .3s 
+
+        &:hover
+          color: variables.$white
+          cursor: pointer
     
     .socials
       width: 30%
@@ -52,9 +58,26 @@ footer
       justify-content: center
       gap: 1.8rem 3.2rem
 
+      a
+        display: flex
+        width: 40%
+
       img
-        width: 30%
+        width: 100%
         max-width: 100px
+
+        cursor: pointer
+
+        &:hover
+          animation: jump 1s ease-in-out
+        
+        @keyframes jump
+          0%
+            transform: translateY(0)
+          50%
+            transform: translateY(-20px)
+          100%
+            transform: translateY(0)
     
   .footer-credits
     width: 100%

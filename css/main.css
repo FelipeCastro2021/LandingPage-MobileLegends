@@ -74,7 +74,7 @@ button {
 
 .menu-banner {
   height: calc(100% - 80px);
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://static1-br.millenium.gg/articles/9/73/29/@/104023-mobile-legends-article_cover_bd-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/wallpaper-ML.jpeg");
   background-size: cover;
   filter: contrast(120%);
   display: flex;
@@ -267,6 +267,12 @@ footer .container ul li {
   font-weight: bold;
   color: #A6A6A6;
   margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+footer .container ul li:hover {
+  color: #fff;
+  cursor: pointer;
 }
 
 footer .container .socials {
@@ -277,11 +283,32 @@ footer .container .socials {
   gap: 1.8rem 3.2rem;
 }
 
-footer .container .socials img {
-  width: 30%;
-  max-width: 100px;
+footer .container .socials a {
+  display: flex;
+  width: 40%;
 }
 
+footer .container .socials img {
+  width: 100%;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+footer .container .socials img:hover {
+  animation: jump 1s ease-in-out;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 footer .footer-credits {
   width: 100%;
   margin-top: 6rem;
